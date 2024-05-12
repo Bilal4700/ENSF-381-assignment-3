@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Sign Up - CompanyCo</title>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="logo.png" alt="Company Logo" width="100">
+        </div>
+        <div class="company-name">
+            Company Name
+        </div>
+    </header>
+
+    <nav>
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="login.html" class="nav-link">Login</a> 
+    </nav>
+
+    <main>
+        <section class="signup-form">
+            <form id="signupForm" onsubmit="return validateForm()">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required placeholder="Enter your username">
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required placeholder="Enter your password">
+
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required placeholder="Re-enter your password">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email">
+
+                <button type="submit" class="signup-btn">Sign Up</button>
+            </form>
+            <div id="messageBox"></div>
+        </section>
+    </main>
+
+    <script>
+        function validateForm() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirmPassword").value;
+            var email = document.getElementById("email").value;
+            var messageBox = document.getElementById("messageBox");
+            var errorMessage = "";
+
+            if (!/^[a-z0-9_-]{3,16}$/i.test(username)) {
+                errorMessage += "Username must be 3-16 characters long and can include letters, numbers, '-' and '_'.\n";
+            }
+            if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^a-zA-Z\d]).{8,}$/.test(password)) {
+                errorMessage += "Password must be at least 8 characters long, include a lowercase letter, an uppercase letter, a number, and a special character.\n";
+            }
+            if (password !== confirmPassword) {
+                errorMessage += "Passwords do not match.\n";
+            }
+            if (!/\S+@\S+\.\S+/.test(email)) {
+                errorMessage += "Invalid email format.\n";
+            }
+
+            if (errorMessage) {
+                messageBox.innerHTML = errorMessage.replace(/\n/g, "<br>");
+                messageBox.style.color = "red";
+                return false;
+            } else {
+                messageBox.innerHTML = "Signup successful!";
+                messageBox.style.color = "green";
+                // Here, you might want to actually submit the form or redirect the user
+                return false; // Prevent form submission for demonstration
+            }
+        }
+    </script>
+
+    <footer class="footer">
+        <p>&copy; 2024 CompanyCo. All rights reserved.</p>
+    </footer>
+</body>
+</html>

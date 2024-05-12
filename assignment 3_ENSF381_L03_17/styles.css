@@ -1,0 +1,269 @@
+/*index.html*/
+
+.header {
+    display: flex;
+    background-color: #333;
+    padding: 0px;
+    flex-direction: row;
+    color: white;
+    text-align: right;
+    align-items: center;
+    margin: 0;
+}
+
+.company-name{
+    font-size: 1.5em;
+    margin-left: 10px;
+}
+
+.nav-link{  
+    color: white;
+    text-decoration: none;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+.about-us{
+    display : block;
+    text-align: center;    
+}
+
+.about-us p{
+    background-color: #ddd;
+    padding: 20px;
+    margin: 20px;
+}
+
+.shop-now button{
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 10px;
+    border: none;
+    cursor:pointer;
+}
+
+.shop-now button:hover{
+    background-color: #45a049;
+}
+
+.customer-reviews{
+    display: flex;
+    flex-direction: column;   
+}
+.review{
+    background-color: #ddd;
+    padding: 20px;
+    margin: 20px;
+}
+
+.customer-reviews h2{
+    text-align: center;
+}
+
+.footer{
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+}
+
+/*products.html*/
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start; 
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+}
+
+.product {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.products img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+tr {
+    vertical-align: bottom; 
+}
+
+.price {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.product:hover {
+    background-color: #ffffff;
+}
+
+.product button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.product button:hover {
+    background-color: #45a049;
+}
+
+table {
+    border-spacing: 150px 10px;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    .product-list {
+        justify-content: center;
+    }
+
+    .product {
+        width: 90%; 
+    }
+
+    table, tr, td {
+        display: block; 
+    }
+
+    table {
+        border-spacing: 0; 
+    }
+}
+
+@media (max-width: 480px) {
+    .product {
+        width: 100%; 
+    }
+}
+
+
+/*contact.html*/
+
+.contact-info{
+    display: flex;
+    flex-direction: column;
+    background-color: #ddd;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    
+}
+
+
+.contact-method{
+    display: flex;
+    background-color: #ddd;
+    flex-direction: column;
+    
+    padding: 0px;
+    margin: 0px;
+    border-radius: 10px;
+}
+.contact-method p{
+    margin-top: 0px;
+}
+.contact-method h3{
+    margin-bottom: 15px;
+}
+
+.contact-method  a:hover{
+    color: #007BFF;
+    text-decoration: none;
+}
+.contact-method ul{
+    list-style-type: none;
+    margin-left: 0px;
+    padding-left: 0px;
+    margin-top: 0px;
+}
+
+/*login page*/
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ddd;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.login-form label {
+    display: block;
+    text-align: left; 
+    margin: 10px;
+}
+
+form input {
+    background-color: #fff;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+form button{
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    opacity: 0.5;
+    border: none;
+    cursor:pointer;
+}
+
+form button:hover{
+    background-color: #45a049;
+    opacity: 1;
+}
+
+form a {
+    color: #007BFF;
+    margin: 10px;
+    text-decoration: none;
+}
+
+form a:hover {
+    text-decoration: underline;
+}
+
+.removeB {
+    background-color: #3b3838c7;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+    color: white;
+    border: none;
+
+}
+
+.removeB:hover {
+    background-color: #ff0000;
+}
+
+
+.signup-btn {
+    background-color: #008CBA; /* Different color */
+}
